@@ -43,8 +43,6 @@
         .service-card:hover h3, .service-card:hover p { color: #fff; }
         .service-card:hover .service-icon { background: #0B1120; }
         .service-card:hover .service-icon svg { color: #60A5FA; }
-        .progress-track { background: #1e293b; border-radius: 9999px; height: 8px; overflow: hidden; }
-        .progress-fill { background: #2563EB; height: 100%; width: 0; border-radius: 9999px; transition: width 1.2s ease-in-out; }
         .project-thumb { transition: transform .4s ease; }
         .project-card:hover .project-thumb { transform: scale(1.05); }
         .fade-in { animation: fadeIn .8s ease-in-out; }
@@ -78,7 +76,6 @@
 
         @media (prefers-reduced-motion: reduce) {
             .reveal { opacity: 1; transform: none; transition: none; }
-            .progress-fill { transition: none; }
             html { scroll-behavior: auto; }
         }
     </style>
@@ -237,47 +234,46 @@
             <p class="gold-text font-semibold tracking-[0.25em] text-sm mb-3 text-center">SKILLS</p>
             <h2 class="text-4xl font-extrabold text-center mb-4">My Skills</h2>
             <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto text-sm">Full-stack toolkit built across professional work at Primitive Health Care and academic + personal projects.</p>
-            <div id="skill-bars" class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">Laravel / PHP</span><span class="gold-text font-semibold">90%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="90%"></div></div>
+            <div id="skill-bars" class="grid md:grid-cols-2 gap-6">
+                <div class="bg-coal p-6 rounded-xl border border-white/5 card-hover">
+                    <h3 class="text-base font-bold mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">React.js</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">Next.js</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">JavaScript</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">TypeScript</span>
+                    </div>
                 </div>
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">React.js</span><span class="gold-text font-semibold">88%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="88%"></div></div>
+                <div class="bg-coal p-6 rounded-xl border border-white/5 card-hover">
+                    <h3 class="text-base font-bold mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">Laravel</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">PHP</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">Node.js</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">REST APIs</span>
+                    </div>
                 </div>
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">MySQL</span><span class="gold-text font-semibold">88%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="88%"></div></div>
+                <div class="bg-coal p-6 rounded-xl border border-white/5 card-hover">
+                    <h3 class="text-base font-bold mb-4">Database</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">MySQL</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">MongoDB</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">SQLite</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">Oracle SQL</span>
+                    </div>
                 </div>
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">Node.js</span><span class="gold-text font-semibold">86%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="86%"></div></div>
-                </div>
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">Next.js</span><span class="gold-text font-semibold">85%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
-                </div>
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">Python</span><span class="gold-text font-semibold">85%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
-                </div>
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">MongoDB</span><span class="gold-text font-semibold">84%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="84%"></div></div>
-                </div>
-                <div>
-                    <div class="flex justify-between text-sm mb-2"><span class="font-medium">JavaScript / TypeScript</span><span class="gold-text font-semibold">86%</span></div>
-                    <div class="progress-track"><div class="progress-fill" data-width="86%"></div></div>
+                <div class="bg-coal p-6 rounded-xl border border-white/5 card-hover">
+                    <h3 class="text-base font-bold mb-4">Programming</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">Python</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">Java</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">C++</span>
+                        <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/80">C#</span>
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-wrap justify-center gap-2 mt-12">
-                <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">Java</span>
-                <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">C++</span>
-                <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">C#</span>
+            <div class="flex flex-wrap justify-center gap-2 mt-8">
                 <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">R</span>
-                <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">Oracle SQL</span>
-                <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">REST APIs</span>
                 <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">Git</span>
                 <span class="text-xs bg-smoke border border-white/10 px-4 py-2 rounded-full text-white/70">Figma</span>
             </div>
@@ -353,72 +349,111 @@
             <p class="gold-text font-semibold tracking-[0.25em] text-sm mb-3 text-center">ACCOMPLISHMENTS</p>
             <h2 class="text-4xl font-extrabold text-center mb-12">My Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5">
+                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5 flex flex-col">
                     <div class="h-40 overflow-hidden bg-gradient-to-br from-amber-500/40 to-orange-700/40 flex items-center justify-center">
                         <span class="project-thumb text-5xl font-extrabold text-slate-500">N3</span>
                     </div>
-                    <div class="p-6">
-                        <p class="text-xs gold-text font-semibold mb-1">Next.js · Node.js · MongoDB</p>
-                        <h3 class="text-lg font-bold mb-2">Hotel Booking Platform</h3>
-                        <p class="text-slate-400 text-sm mb-4">Full-stack booking app with search, reservations and admin management.</p>
-                        <a href="https://n3xtstay-main-production.up.railway.app/" target="_blank" class="text-sm gold-text hover:underline font-medium">Live Demo →</a>
-                    </div>
-                </div>
-                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5">
-                    <div class="h-40 overflow-hidden bg-gradient-to-br from-emerald-500/40 to-teal-800/40 flex items-center justify-center">
-                        <span class="project-thumb text-5xl font-extrabold text-slate-500">AI</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs gold-text font-semibold mb-1">Python · Automation</p>
-                        <h3 class="text-lg font-bold mb-2">AI Attendance Report Generator</h3>
-                        <p class="text-slate-400 text-sm mb-4">Automated attendance processing and report generation tool.</p>
-                        <a href="https://attendance-report-generator-5.onrender.com/" target="_blank" class="text-sm gold-text hover:underline font-medium">Live Demo →</a>
-                    </div>
-                </div>
-                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5">
-                    <div class="h-40 overflow-hidden bg-gradient-to-br from-rose-500/40 to-red-800/40 flex items-center justify-center">
-                        <span class="project-thumb text-5xl font-extrabold text-slate-500">BL</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs gold-text font-semibold mb-1">React.js</p>
-                        <h3 class="text-lg font-bold mb-2">BloodLink — Donation Platform</h3>
-                        <p class="text-slate-400 text-sm mb-4">Donor search, blood requests and collection management.</p>
-                        <div class="flex gap-4 text-sm">
-                            <a href="https://bloodlinkw.netlify.app/" target="_blank" class="gold-text hover:underline font-medium">Live Demo →</a>
-                            <a href="https://github.com/rafinm-de/BloodLink" target="_blank" class="text-slate-400 hover:text-white">GitHub →</a>
+                    <div class="p-6 flex flex-col flex-1">
+                        <p class="text-xs gold-text font-semibold mb-1">PHP · MySQL · JavaScript</p>
+                        <h3 class="text-lg font-bold mb-2">N3XTSTAY — Hotel Booking Platform</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Full-stack hotel reservation platform for browsing domestic & international destinations, booking rooms with real-time availability, and managing everything from an admin panel. Solves manual booking chaos with auth, payments, and dashboards in one place.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Authentication</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Booking</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Admin Dashboard</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Room Management</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">bKash / Nagad / SSLCommerz</span>
+                        </div>
+                        <div class="flex gap-3 mt-auto pt-4">
+                            <a href="https://n3xtstay-main-production.up.railway.app/" target="_blank" class="flex-1 text-center gold-bg text-white text-sm px-4 py-2.5 rounded-full font-semibold hover:opacity-90 transition">Live Demo →</a>
+                            <a href="https://github.com/rafinm-de/N3XTSTAY--main" target="_blank" class="flex-1 text-center text-sm px-4 py-2.5 rounded-full font-semibold border border-slate-500 hover:border-[#60A5FA] hover:text-[#60A5FA] transition flex items-center justify-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5">
+                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5 flex flex-col">
+                    <div class="h-40 overflow-hidden bg-gradient-to-br from-emerald-500/40 to-teal-800/40 flex items-center justify-center">
+                        <span class="project-thumb text-5xl font-extrabold text-slate-500">AI</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <p class="text-xs gold-text font-semibold mb-1">Python · Flask · Automation</p>
+                        <h3 class="text-lg font-bold mb-2">AI Attendance Report Generator</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Turns messy manual attendance sheets into clean reports in seconds. Upload raw data, get automated processing and downloadable summaries — built to save teachers and teams hours of spreadsheet work.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">File Upload</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Auto Processing</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Report Export</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Web UI</span>
+                        </div>
+                        <div class="flex gap-3 mt-auto pt-4">
+                            <a href="https://attendance-report-generator-5.onrender.com/" target="_blank" class="flex-1 text-center gold-bg text-white text-sm px-4 py-2.5 rounded-full font-semibold hover:opacity-90 transition">Live Demo →</a>
+                            <a href="https://github.com/rafinm-de/Attendance_Report_Generator" target="_blank" class="flex-1 text-center text-sm px-4 py-2.5 rounded-full font-semibold border border-slate-500 hover:border-[#60A5FA] hover:text-[#60A5FA] transition flex items-center justify-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5 flex flex-col">
+                    <div class="h-40 overflow-hidden bg-gradient-to-br from-rose-500/40 to-red-800/40 flex items-center justify-center">
+                        <span class="project-thumb text-5xl font-extrabold text-slate-500">BL</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <p class="text-xs gold-text font-semibold mb-1">JavaScript · PHP · MySQL</p>
+                        <h3 class="text-lg font-bold mb-2">BloodLink — Donation Platform</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Connects blood donors with urgent requests. Search donors by group and location, post blood requests, and manage collections — designed for speed when every minute matters.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Donor Search</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Blood Requests</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Collection Management</span>
+                        </div>
+                        <div class="flex gap-3 mt-auto pt-4">
+                            <a href="https://bloodlinkw.netlify.app/" target="_blank" class="flex-1 text-center gold-bg text-white text-sm px-4 py-2.5 rounded-full font-semibold hover:opacity-90 transition">Live Demo →</a>
+                            <a href="https://github.com/rafinm-de/BloodLink" target="_blank" class="flex-1 text-center text-sm px-4 py-2.5 rounded-full font-semibold border border-slate-500 hover:border-[#60A5FA] hover:text-[#60A5FA] transition flex items-center justify-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5 flex flex-col">
                     <div class="h-40 overflow-hidden bg-gradient-to-br from-sky-500/40 to-indigo-800/40 flex items-center justify-center">
                         <span class="project-thumb text-5xl font-extrabold text-slate-500">MP</span>
                     </div>
-                    <div class="p-6">
-                        <p class="text-xs gold-text font-semibold mb-1">React.js · Node.js · MongoDB</p>
+                    <div class="p-6 flex flex-col flex-1">
+                        <p class="text-xs gold-text font-semibold mb-1">HTML · CSS · JavaScript</p>
                         <h3 class="text-lg font-bold mb-2">MrsPickle E-commerce</h3>
-                        <p class="text-slate-400 text-sm mb-4">E-commerce site with cart, orders and product management.</p>
-                        <a href="https://github.com/rafinm-de/MrsPickle" target="_blank" class="text-sm gold-text hover:underline font-medium">GitHub →</a>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Storefront for a small pickle business to sell online. Product listings, cart flow, and order handling with a responsive mobile-first design.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Cart</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Orders</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Product Management</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Responsive UI</span>
+                        </div>
+                        <div class="flex gap-3 mt-auto pt-4">
+                            <a href="https://github.com/rafinm-de/MrsPickle" target="_blank" class="flex-1 text-center text-sm px-4 py-2.5 rounded-full font-semibold border border-slate-500 hover:border-[#60A5FA] hover:text-[#60A5FA] transition flex items-center justify-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5">
+                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5 flex flex-col">
                     <div class="h-40 overflow-hidden bg-gradient-to-br from-lime-500/30 to-green-800/40 flex items-center justify-center">
                         <span class="project-thumb text-5xl font-extrabold text-slate-500">IoT</span>
                     </div>
-                    <div class="p-6">
-                        <p class="text-xs gold-text font-semibold mb-1">ESP32 · Sensors</p>
+                    <div class="p-6 flex flex-col flex-1">
+                        <p class="text-xs gold-text font-semibold mb-1">ESP32 · C++ · Sensors</p>
                         <h3 class="text-lg font-bold mb-2">IoT Home Automation</h3>
-                        <p class="text-slate-400 text-sm mb-4">Control lights/appliances via mobile app with temperature & motion sensing.</p>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Control lights and appliances from a mobile app instead of walking room to room. ESP32 + temperature and motion sensors for smarter, remote home control.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Remote Control</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Temperature Sensing</span>
+                            <span class="text-[11px] bg-ink border border-white/10 px-3 py-1 rounded-full text-white/70">Motion Detection</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5">
+                <div class="project-card bg-smoke rounded-xl overflow-hidden card-hover border border-white/5 flex flex-col">
                     <div class="h-40 overflow-hidden bg-gradient-to-br from-violet-500/40 to-purple-800/40 flex items-center justify-center">
                         <span class="project-thumb text-5xl font-extrabold text-slate-500">+</span>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col flex-1">
                         <p class="text-xs gold-text font-semibold mb-1">10+ more repos</p>
                         <h3 class="text-lg font-bold mb-2">All Repositories</h3>
                         <p class="text-slate-400 text-sm mb-4">CodeKid, Doctor Chamber, CoinMaster, IDS data-science projects & more.</p>
-                        <a href="https://github.com/rafinm-de?tab=repositories" target="_blank" class="text-sm gold-text hover:underline font-medium">GitHub Profile →</a>
+                        <div class="flex gap-3 mt-auto pt-4">
+                            <a href="https://github.com/rafinm-de?tab=repositories" target="_blank" class="flex-1 text-center text-sm px-4 py-2.5 rounded-full font-semibold border border-slate-500 hover:border-[#60A5FA] hover:text-[#60A5FA] transition flex items-center justify-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub Profile</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -583,18 +618,6 @@
         }, { threshold: 0.5 });
         counters.forEach(c => counterObserver.observe(c));
 
-        // Animated skill bars
-        const bars = document.querySelectorAll('.progress-fill');
-        const barObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.width;
-                    barObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.4 });
-        bars.forEach(b => barObserver.observe(b));
-
         // Contact form: open mail client + confirm
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
@@ -682,7 +705,7 @@
         spySections.forEach(s => spyObserver.observe(s));
 
         // ---- Typewriter rotating roles (hero slider feel) ----
-        const roles = ['Laravel Developer', 'React & Next.js Builder', 'REST API Craftsman', 'MySQL / MongoDB Guy', 'Automation Enthusiast'];
+        const roles = ['Laravel Developer', 'React & Next.js Builder', 'REST API Craftsman', 'MySQL / MongoDB Developer', 'Automation Enthusiast'];
         const typedEl = document.getElementById('typed');
         if (typedEl && !prefersReduced) {
             let ri = 0, ci = 0, deleting = false;
